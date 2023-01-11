@@ -1,0 +1,33 @@
+{
+  "name": "react-native-template-tdev",
+  "version": "0.1.0",
+  "description": "React Native Template made by TDev Community",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TDev-Debug-With-You/rn-template-tdev.git"
+  },
+  "keywords": [
+    "react-native-template",
+    "typescript",
+    "react-navigation",
+    "redux",
+    "redux-toolkit",
+    "async-storage",
+    "react-native-maps",
+    "axios",
+    "expo"
+  ],
+  "author": "Samson AKUMANI",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TDev-Debug-With-You/rn-template-tdev/issues"
+  },
+  "homepage": "https://github.com/TDev-Debug-With-You/rn-template-tdev#readme"
+}

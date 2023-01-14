@@ -1,0 +1,31 @@
+{
+    "state-management": [
+        "Hooks",
+        "Redux",
+        "Redux Toolkit",
+        "MobX",
+        "XState",
+        "Jotai",
+        "React Query"
+    ],
+    "navigation": [
+        "react-navigation-v6",
+        "react-native-navigation"      
+    ],
+    "design": [
+        "Material",
+        "Eva Design"
+    ],
+    "maps": [
+        "react-native-maps",
+        "react-native-apple-maps"
+    ],
+    "storage": [
+        "@async-storage/react-native-async-storage"
+    ],
+    "utils": [
+        "react-native-maps",
+        "@imgly/react-native-photo-editorsdk",
+        "@imgly/react-native-video-editorsdk"
+    ]
+}

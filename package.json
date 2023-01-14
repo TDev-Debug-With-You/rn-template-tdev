@@ -7,12 +7,13 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/rn-t-tdev"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TDev-Debug-With-You/rn-template-tdev.git"
   },
+  "type": "module",
   "keywords": [
     "react-native-template",
     "typescript",
@@ -29,5 +30,13 @@
   "bugs": {
     "url": "https://github.com/TDev-Debug-With-You/rn-template-tdev/issues"
   },
-  "homepage": "https://github.com/TDev-Debug-With-You/rn-template-tdev#readme"
+  "homepage": "https://github.com/TDev-Debug-With-You/rn-template-tdev#readme",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "chalk-animation": "^2.0.3",
+    "figlet": "^1.5.2",
+    "gradient-string": "^2.0.2",
+    "inquirer": "^9.1.4",
+    "nanospinner": "^1.1.0"
+  }
 }

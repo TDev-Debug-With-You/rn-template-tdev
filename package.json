@@ -1,13 +1,14 @@
 {
-  "name": "react-native-template-tdev",
-  "version": "0.1.1",
+  "name": "rn-tdev228-cli",
+  "version": "0.1.2",
   "description": "React Native Template made by TDev Community",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
+  "bin": "./index.js",
   "scripts": {
-    "start": "node ./bin/rn-t-tdev"
+    "start": "node ."
   },
   "repository": {
     "type": "git",

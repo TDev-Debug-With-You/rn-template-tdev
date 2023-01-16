@@ -17,12 +17,12 @@ const lg = (msg) => console.log(msg)
 const lgGreen = (msg) => console.log(chalk.green(msg))
 const lgBlue = (msg) => console.log(chalk.blue(msg))
 
-const lgFinal = (msg) => console.log("\n\nYou selected the following options:\n\n", gradient.pastel(msg))
+const lgFinal = (msg, lang) => console.log(`${(lang === "english") ? "\n\nYou selected the following options:\n\n" : "\n\nVous avez selectionné ces options suivantes:\n\n"}`, gradient.pastel(msg))
 
 
-const lgGreenFinal = (msg) => lgGreen(`\n\nYou selected the following options:\n\n${(msg)}`)
-const lgBlueFinal = (msg) => lgGreen(`\n\nYou selected the following options:\n\n${(msg)}`)
-const logFinal = (msg) => lg(`\n\nYou selected the following options:\n\n${(msg)}`)
+const lgGreenFinal = (msg, lang) => lgGreen(`${(lang === "english") ? "\n\nYou selected the following options:\n\n" : "\n\nVous avez selectionné ces options suivantes:\n\n"} ${(msg)}`)
+const lgBlueFinal = (msg, lang) => lgGreen(`${(lang === "english") ? "\n\nYou selected the following options:\n\n" : "\n\nVous avez selectionné ces options suivantes:\n\n"} ${(msg)}`)
+const logFinal = (msg, lang) => lg(`${(lang === "english") ? "\n\nYou selected the following options:\n\n" : "\n\nVous avez selectionné ces options suivantes:\n\n"} ${(msg)}`)
 
 // for (const topic of await selectTopics(await selectLanguage())) {
 //     let topicCamel = topic.toLowerCase().replace(/ /g, '_');
@@ -40,7 +40,7 @@ const language = await selectLanguage();
 const topics = await selectTopics(language);
 const selectedOptions = await selectLibraries(topics, language);
 const handleOptions = await handleTopicsSelection(selectedOptions, language);
-await tdevOut()
+await tdevOut(language)
 
 
 //Welcome Function
@@ -106,8 +106,8 @@ async function selectLibraries(topics, language) {
 async function handleTopicsSelection(topics, selectedLanguage) {
 
   let output = "";
-  output += "This is the @tdev228/cli configuration\n";
-  output += "@tdev228.config.js = { \n";
+  output += (selectLanguage === "english")? "This is the rn-tdev228 configuration file \n": "Voici la configuration du fichier de rn-tdev228";
+  output += "rn-tdev228.config.js = { \n";
   output += `lang: ${selectedLanguage},\n`;
   output += "topics: [\n";
   for (const topic in topics) {
@@ -120,18 +120,18 @@ async function handleTopicsSelection(topics, selectedLanguage) {
 
 
 //Fake Template Generator
-function tdevOut() {
+function tdevOut(language) {
   figlet('TDEV 228 template', async function (err, data) {
     const spinner = createSpinner('Template generate...\n').start();
     await sleep();
 
     if (err) {
-      spinner.error({ text: "It seems like this template is not yet implemented\n You can contribute to our repository if you want this template\n Otherwise select another configuration" });
+      spinner.error({ text: DATA.outputDisplay[language] });
       process.exit(1);
     } else {
       spinner.success({ text: lgFinal(data) });
 
-      lgBlueFinal(handleOptions)
+      lgBlueFinal(handleOptions, language)
       process.exit(0)
     }
   });

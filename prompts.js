@@ -1,4 +1,9 @@
 const DATA = {
+    outputDisplay: {
+        english: "It seems like this template is not yet implemented\n You can contribute to our repository if you want this template\n Otherwise select another configuration",
+        french: "Il senble que ce template n'est pas encore implementé\n Vous pouvez contribuer dans notre repo si vous voulez vraiment ce template\n Autrement allez y avec une autre proche configuration"
+    }
+    ,
     topics_options: {
         english: [
             "Navigation",
@@ -46,7 +51,7 @@ const DATA = {
             "Apollo Client",
             "FireBase"
         ],
-        gesture: [
+        gestures: [
             "react-native-gesture-handler", ,
             "RNGestureHandler"
         ],
@@ -78,7 +83,7 @@ const DATA = {
             "React Native Firebase Notifications",
             "OneSignal"
         ],
-        styling: [
+        style: [
             "styled-components",
             "emotion",
             "react-native-paper",
@@ -100,13 +105,13 @@ const DATA = {
                 navigation: "Select the library for navigation",
                 state_management: "Select the library for state management",
                 storage: "Select the library for storage",
-                gesture: "Select the library for gesture handling",
+                gestures: "Select the library for gesture handling",
                 animations: "Select the library for animations",
                 maps: "Select the library for maps and geo-location",
                 permissions: "Select the library for handling device permissions",
                 media: "Select the library for media handling",
                 notifications: "Select the library for notifications",
-                styling: "Select the library for styling",
+                style: "Select the library for styling",
                 // performance_optimization: "Select the library for performance optimization",
             },
         },
@@ -116,13 +121,13 @@ const DATA = {
                 navigation: "Sélectionnez la bibliothèque pour la navigation",
                 state_management: "Sélectionnez la bibliothèque pour la gestion de l'état",
                 storage: "Sélectionnez la bibliothèque pour le stockage",
-                gesture: "Sélectionnez la bibliothèque pour la gestion des gestes",
+                gestures: "Sélectionnez la bibliothèque pour la gestion des gestes",
                 animations: "Sélectionnez la bibliothèque pour les animations",
                 maps: "Sélectionnez la bibliothèque pour les cartes et la géolocalisation",
                 permissions: "Sélectionnez la bibliothèque pour la gestion des autorisations de périphériques",
                 media: "Sélectionnez la bibliothèque pour la gestion des médias",
                 notifications: "Sélectionnez la bibliothèque pour les notifications",
-                styling: "Sélectionnez la bibliothèque pour le style",
+                style: "Sélectionnez la bibliothèque pour le style",
                 // performance_optimization: "Sélectionnez la bibliothèque pour l'optimisation des performances",
             },
         }
@@ -135,15 +140,13 @@ export default DATA;
 
 
 export const topicsTranslations = {
-    "Navigation": "navigation",
     "Gestion de l'état": "state_management",
+    "Médias": "media",
     "Stockage": "storage",
-    "Gestes": "gesture",
-    "Animations": "animations",
+    "Gestes": "gestures",
     "Cartes(Géolocalisation)": "maps",
     "Maps(Geo location)": "maps",
-    "Permissions": "permissions",
     "Médias": "media",
-    "Notifications": "notifications",
-    "Style": "styling",
+    "Medias": "media",
+    "Styling": "style"
 }
